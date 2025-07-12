@@ -13,7 +13,7 @@ export default function Home() {
                 Your Path to
                 <span className="text-blue-600"> Mental Wellness</span>
               </h1>
-              <p className="text-xl text-red-600 mb-8">
+              <p className="text-xl text-gray-600 mb-8">
                 Professional psychological services with compassion and expertise. 
                 I&apos;m here to help you navigate life&apos;s challenges and achieve lasting positive change.
               </p>
@@ -39,7 +39,7 @@ export default function Home() {
                     <span className="text-4xl">👩‍⚕️</span>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Dr. Dorothy</h3>
-                  <p className="text-red-600 mb-4">Licensed Clinical Psychologist</p>
+                  <p className="text-blue-900 mb-4">Licensed Clinical Psychologist</p>
                   <p className="text-sm text-gray-500">
                     &quot;Creating a safe space where healing and growth can flourish.&quot;
                   </p>
@@ -110,7 +110,7 @@ export default function Home() {
                     <span className="text-white text-sm">✓</span>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-semibold mb-2">Evidence-Based Approach</h3>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Evidence-Based Approach</h3>
                     <p className="text-gray-600">
                       Using scientifically proven therapeutic methods tailored to your specific needs.
                     </p>
@@ -122,7 +122,7 @@ export default function Home() {
                     <span className="text-white text-sm">✓</span>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-semibold mb-2">Safe & Confidential</h3>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Safe & Confidential</h3>
                     <p className="text-gray-600">
                       A judgment-free environment where you can express yourself freely and honestly.
                     </p>
@@ -134,7 +134,7 @@ export default function Home() {
                     <span className="text-white text-sm">✓</span>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-semibold mb-2">Personalized Care</h3>
+                    <h3 className="text-lg font-semibold text-gray-600 mb-2">Personalized Care</h3>
                     <p className="text-gray-600">
                       Every treatment plan is customized to your unique circumstances and goals.
                     </p>
@@ -178,7 +178,7 @@ export default function Home() {
                   {'★'.repeat(5)}
                 </div>
               </div>
-              <p className="text-red-600 mb-4">
+              <p className="text-gray-600 mb-4">
                 &quot;Dr. Dorothy helped me through one of the most difficult periods of my life. 
                 Her compassionate approach and practical strategies made all the difference.&quot;
               </p>
