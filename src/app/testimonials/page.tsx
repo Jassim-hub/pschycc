@@ -101,7 +101,7 @@ export default function Testimonials() {
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6 text-lg leading-relaxed">
-                  "{testimonial.text}"
+                  &quot;{testimonial.text}&quot;
                 </p>
                 <div className="border-t pt-4">
                   <h4 className="font-semibold text-gray-900 mb-1">{testimonial.name}</h4>
@@ -166,7 +166,7 @@ export default function Testimonials() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Initial Sessions</h3>
               <p className="text-gray-600">
-                We'll discuss your goals, history, and develop a treatment plan tailored to your needs.
+                We&apos;ll discuss your goals, history, and develop a treatment plan tailored to your needs.
               </p>
             </div>
             
@@ -176,7 +176,7 @@ export default function Testimonials() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Active Work</h3>
               <p className="text-gray-600">
-                Through consistent sessions, we'll work on developing coping strategies and processing experiences.
+                Through consistent sessions, we&apos;ll work on developing coping strategies and processing experiences.
               </p>
             </div>
             
@@ -186,7 +186,7 @@ export default function Testimonials() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Growth & Maintenance</h3>
               <p className="text-gray-600">
-                As you achieve your goals, we'll focus on maintaining progress and preventing relapse.
+                As you achieve your goals, we&apos;ll focus on maintaining progress and preventing relapse.
               </p>
             </div>
           </div>

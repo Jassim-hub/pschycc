@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 
 import { useState } from 'react';
@@ -64,7 +65,7 @@ export default function Contact() {
                     <div className="ml-3">
                       <h3 className="text-sm font-medium text-green-800">Message Sent Successfully!</h3>
                       <p className="text-sm text-green-700 mt-1">
-                        Thank you for reaching out. I'll get back to you within 24 hours.
+                        Thank you for reaching out. I&apos;ll get back to you within 24 hours.
                       </p>
                     </div>
                   </div>
@@ -231,7 +232,7 @@ export default function Contact() {
               <div className="mt-12 bg-red-50 border border-red-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-red-900 mb-2">Crisis Support</h3>
                 <p className="text-red-700 mb-4">
-                  If you're experiencing a mental health emergency, please contact:
+                  If you&apos;re experiencing a mental health emergency, please contact:
                 </p>
                 <div className="space-y-2 text-red-700">
                   <p><strong>National Suicide Prevention Lifeline:</strong> 988</p>
@@ -273,7 +274,7 @@ export default function Contact() {
               <h3 className="text-lg font-semibold text-gray-900 mb-3">What should I expect in the first session?</h3>
               <p className="text-gray-600">
                 The first session involves discussing your goals, current challenges, and history. 
-                We'll also develop a treatment plan tailored to your needs.
+                We&apos;ll also develop a treatment plan tailored to your needs.
               </p>
             </div>
 

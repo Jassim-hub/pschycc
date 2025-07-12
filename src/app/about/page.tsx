@@ -60,21 +60,21 @@ export default function About() {
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">My Story</h2>
                   <div className="space-y-4 text-lg text-gray-600">
                     <p>
-                      Welcome! I'm Dr. Dorothy, a licensed clinical psychologist with over 15 years 
-                      of experience helping individuals and couples navigate life's challenges and achieve 
+                      Welcome! I&apos;m Dr. Dorothy, a licensed clinical psychologist with over 15 years 
+                      of experience helping individuals and couples navigate life&apos;s challenges and achieve 
                       meaningful change.
                     </p>
                     <p>
                       My journey into psychology began with a deep curiosity about human behavior and a 
                       genuine desire to help others. I believe that everyone has the capacity for growth 
-                      and healing, and I'm passionate about creating a safe, supportive environment where 
+                      and healing, and I&apos;m passionate about creating a safe, supportive environment where 
                       that transformation can occur.
                     </p>
                     <p>
-                      Throughout my career, I've had the privilege of working with diverse populations and 
-                      a wide range of mental health concerns. This experience has taught me that there's 
+                      Throughout my career, I&apos;ve had the privilege of working with diverse populations and 
+                      a wide range of mental health concerns. This experience has taught me that there&apos;s 
                       no one-size-fits-all approach to therapy, which is why I tailor my methods to meet 
-                      each client's unique needs and circumstances.
+                      each client&apos;s unique needs and circumstances.
                     </p>
                   </div>
                 </div>

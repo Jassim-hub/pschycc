@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
+
 import Link from 'next/link';
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
               </h1>
               <p className="text-xl text-red-600 mb-8">
                 Professional psychological services with compassion and expertise. 
-                I'm here to help you navigate life's challenges and achieve lasting positive change.
+                I&apos;m here to help you navigate life&apos;s challenges and achieve lasting positive change.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -41,7 +41,7 @@ export default function Home() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Dr. Dorothy</h3>
                   <p className="text-red-600 mb-4">Licensed Clinical Psychologist</p>
                   <p className="text-sm text-gray-500">
-                    "Creating a safe space where healing and growth can flourish."
+                    &quot;Creating a safe space where healing and growth can flourish.&quot;
                   </p>
                 </div>
               </div>
@@ -167,7 +167,7 @@ export default function Home() {
               What My Clients Say
             </h2>
             <p className="text-xl text-red-600">
-              Real stories from people who've found healing and growth
+              Real stories from people who&apos;ve found healing and growth
             </p>
           </div>
           
@@ -179,8 +179,8 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-red-600 mb-4">
-                "Dr. Dorothy helped me through one of the most difficult periods of my life. 
-                Her compassionate approach and practical strategies made all the difference."
+                &quot;Dr. Dorothy helped me through one of the most difficult periods of my life. 
+                Her compassionate approach and practical strategies made all the difference.&quot;
               </p>
               <p className="font-semibold text-gray-900">- Sarah K.</p>
             </div>
@@ -192,8 +192,8 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-600 mb-4">
-                "The therapy sessions were transformative. I learned valuable coping skills 
-                and gained a new perspective on my challenges."
+                &quot;The therapy sessions were transformative. I learned valuable coping skills 
+                and gained a new perspective on my challenges.&quot;
               </p>
               <p className="font-semibold text-gray-900">- Michael R.</p>
             </div>
