@@ -12,7 +12,7 @@ export default function Home() {
                 Your Path to
                 <span className="text-blue-600"> Mental Wellness</span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
+                  <p className="text-xl text-gray-600 mb-8">
                 Professional psychological services with compassion and expertise. 
                 I&apos;m here to help you navigate life&apos;s challenges and achieve lasting positive change.
               </p>
