@@ -1,5 +1,150 @@
+"use client";
 
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+
+const images = [
+  '/images/anthony-tran-vXymirxr5ac-unsplash.jpg',
+  '/images/ben-white-7SRymDKKDus-unsplash.jpg',
+  '/images/adrian-swancar-roCfgvkBLVY-unsplash.jpg',
+  '/images/claudia-wolff-owBcefxgrIE-unsplash.jpg',
+  '/images/nik-shuliahin-BuNWp1bL0nc-unsplash.jpg',
+  '/images/mitchel-lensink-Ismnr6WSHCU-unsplash.jpg',
+];
+
+function ServicesCarousel() {
+  const [current, setCurrent] = useState(0);
+  const [prevIdx, setPrevIdx] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setPrevIdx(current);
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrent((prev) => (prev + 1) % images.length);
+        setIsTransitioning(false);
+      }, 400);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [current]);
+  const goTo = (idx: number) => {
+    setPrevIdx(current);
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrent(idx);
+      setIsTransitioning(false);
+    }, 400);
+  };
+  const prev = () => {
+    setPrevIdx(current);
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrent((current - 1 + images.length) % images.length);
+      setIsTransitioning(false);
+    }, 400);
+  };
+  const next = () => {
+    setPrevIdx(current);
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrent((current + 1) % images.length);
+      setIsTransitioning(false);
+    }, 400);
+  };
+  return (
+    <section
+      className="py-20 relative overflow-hidden"
+      aria-label="How I Can Help You section background"
+    >
+      {/* Outgoing image */}
+      <div
+        className={`absolute inset-0 transition-opacity duration-400 will-change-opacity z-0 ${isTransitioning ? 'opacity-100' : 'opacity-0'}`}
+        style={{
+          backgroundImage: `url('${images[prevIdx]}')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          minHeight: '500px',
+        }}
+      />
+      {/* Incoming image */}
+      <div
+        className={`absolute inset-0 transition-opacity duration-400 will-change-opacity z-0 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}
+        style={{
+          backgroundImage: `url('${images[current]}')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          minHeight: '500px',
+        }}
+      />
+      <div className="absolute inset-y-0 left-0 flex items-center z-20">
+        <button
+          onClick={prev}
+          aria-label="Previous image"
+          className="bg-gray-500 bg-opacity-30 text-white rounded-full w-10 h-10 flex items-center justify-center mx-2 shadow hover:bg-gray-700 hover:bg-opacity-60 transition"
+        >&#8592;</button>
+      </div>
+      <div className="absolute inset-y-0 right-0 flex items-center z-20">
+        <button
+          onClick={next}
+          aria-label="Next image"
+          className="bg-gray-500 bg-opacity-30 text-white rounded-full w-10 h-10 flex items-center justify-center mx-2 shadow hover:bg-gray-700 hover:bg-opacity-60 transition"
+        >&#8594;</button>
+      </div>
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+        {images.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => goTo(idx)}
+            aria-label={`Go to image ${idx + 1}`}
+            className={`w-3 h-3 rounded-full ${current === idx ? 'bg-blue-600' : 'bg-white bg-opacity-80'} border border-blue-600`}
+          />
+        ))}
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="relative z-10 text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            How I Can Help You
+          </h2>
+          <p className="text-xl text-red-600 max-w-3xl mx-auto">
+            Specialized psychological services tailored to your unique needs and goals
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-blue-50 p-8 rounded-xl">
+            <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+              <span className="text-white text-xl">🧠</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-4">Individual Therapy</h3>
+            <p className="text-gray-600">
+              One-on-one sessions to address anxiety, depression, trauma, and personal growth challenges.
+            </p>
+          </div>
+          <div className="bg-green-50 p-8 rounded-xl">
+            <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+              <span className="text-white text-xl">💑</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-4">Couples Therapy</h3>
+            <p className="text-gray-600">
+              Strengthen your relationship through improved communication and conflict resolution.
+            </p>
+          </div>
+          <div className="bg-purple-50 p-8 rounded-xl">
+            <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+              <span className="text-white text-xl">🌱</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-4">Trauma Recovery</h3>
+            <p className="text-gray-600">
+              Evidence-based approaches to heal from traumatic experiences and build resilience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  );
+}
 
 export default function Home() {
   return (
@@ -51,50 +196,7 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              How I Can Help You
-            </h2>
-            <p className="text-xl text-red-600 max-w-3xl mx-auto">
-              Specialized psychological services tailored to your unique needs and goals
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-blue-50 p-8 rounded-xl">
-              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white text-xl">🧠</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Individual Therapy</h3>
-              <p className="text-gray-600">
-                One-on-one sessions to address anxiety, depression, trauma, and personal growth challenges.
-              </p>
-            </div>
-            
-            <div className="bg-green-50 p-8 rounded-xl">
-              <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white text-xl">💑</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Couples Therapy</h3>
-              <p className="text-gray-600">
-                Strengthen your relationship through improved communication and conflict resolution.
-              </p>
-            </div>
-            
-            <div className="bg-purple-50 p-8 rounded-xl">
-              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white text-xl">🌱</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Trauma Recovery</h3>
-              <p className="text-gray-600">
-                Evidence-based approaches to heal from traumatic experiences and build resilience.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServicesCarousel />
 
       {/* Why Choose Me */}
       <section className="py-20 bg-gray-50">
@@ -211,4 +313,6 @@ export default function Home() {
       </section>
     </div>
   );
-}
+}   
+
+
